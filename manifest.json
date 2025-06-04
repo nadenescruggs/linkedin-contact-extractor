@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Contact Extractor",
+  "version": "1.0",
+  "description": "Extract contact information from LinkedIn search results and profiles",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "LinkedIn Contact Extractor"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content.css"],
+      "matches": ["*://*.linkedin.com/*"]
+    }
+  ]
+}
