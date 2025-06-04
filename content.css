@@ -1,0 +1,140 @@
+#linkedin-extractor-ui {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 2px solid #0077b5;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.extractor-header {
+  background: #0077b5;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extractor-content {
+  padding: 15px;
+}
+
+.extractor-stats {
+  background: #f3f6f8;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.extractor-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.extractor-controls button {
+  flex: 1;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#extract-btn {
+  background: #0077b5;
+  color: white;
+}
+
+#extract-btn:hover {
+  background: #005885;
+}
+
+#stop-btn {
+  background: #666;
+  color: white;
+}
+
+#stop-btn:hover {
+  background: #555;
+}
+
+.extractor-results {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.live-contact {
+  padding: 6px 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 11px;
+}
+
+.live-contact:last-child {
+  border-bottom: none;
+}
+
+.live-contact-name {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.live-contact-email {
+  color: #0077b5;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.live-contact-email:hover {
+  text-decoration: underline;
+}
+
+.live-contact-info {
+  color: #666;
+  font-size: 10px;
+  margin: 1px 0;
+}
+
+/* Make sure it doesn't interfere with LinkedIn's UI */
+#linkedin-extractor-ui * {
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  #linkedin-extractor-ui {
+    width: 280px;
+    right: 10px;
+    top: 10px;
+  }
+}
